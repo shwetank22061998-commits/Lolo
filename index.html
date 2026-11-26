@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f5ed">
+<title>Shwetank & Sheetal — The Wedding Edit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{font-family:'DM Sans',sans-serif;color:#24231f;background:#f8f5ed;--ink:#24231f;--paper:#f8f5ed;--pink:#f4b9bd;--yellow:#f5d76e;--green:#b7cdb4;--line:#d8d2c5;--mono:'DM Mono',monospace;--serif:'Playfair Display',serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);background-image:radial-gradient(rgba(40,35,25,.065) .65px,transparent .65px);background-size:7px 7px}
+.invite-shell{max-width:1120px;margin:0 auto;overflow:hidden;background:var(--paper);border-left:1px solid #e5dfd3;border-right:1px solid #e5dfd3}
+.topbar{height:66px;padding:0 clamp(20px,5vw,64px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.tiny-mark{font-family:var(--serif);font-size:23px;font-weight:700;letter-spacing:-3px}.tiny-mark span{font-size:12px;color:#d47f84;vertical-align:top;margin:0 4px}
+.top-note,.skip-link,footer,.eyebrow,.hero-date,.section-kicker,.card-label,.final-section>p,.final-date{font:10px var(--mono);letter-spacing:1.5px}
+.skip-link{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.hero{min-height:680px;position:relative;text-align:center;padding:82px 20px 70px;display:flex;align-items:center;flex-direction:column;justify-content:center}
+.eyebrow{margin:0 0 22px;color:#777064}.hero-title{font-family:var(--serif);font-size:clamp(64px,11vw,130px);line-height:.9;letter-spacing:-6px;font-weight:700;margin:0;display:flex;flex-direction:column;align-items:center}
+.hero-title i{font-size:.47em;color:#c8797f;line-height:1.05;font-weight:600}
+.hand-note{font-family:var(--serif);font-style:italic;font-size:clamp(23px,4vw,34px);line-height:1.02;transform:rotate(-8deg);position:absolute;left:14%;top:43%;background:var(--yellow);padding:13px 17px 16px;border-radius:47% 53% 46% 54%/48% 38% 62% 52%;box-shadow:2px 4px 0 var(--ink);z-index:2}
+.hand-note b{font-size:20px}.ring-doodle{position:absolute;right:16%;top:36%;font-size:72px;color:#d98b90;transform:rotate(-28deg)}
+.ring-doodle span:nth-child(2){margin-left:-31px}.ring-doodle em{font-size:22px;position:absolute;top:-5px;right:-12px}
+.hero-date{font-size:13px;margin:39px 0 12px}.hero-date span{color:#d47f84;padding:0 8px}
+.hero-caption{font-family:var(--serif);font-style:italic;color:#777064;font-size:16px;margin:0 0 25px}
+.pill-button,.share-button{border:1.5px solid var(--ink);border-radius:99px;padding:14px 22px;text-decoration:none;color:var(--ink);font:10px var(--mono);letter-spacing:1px;display:inline-flex;gap:23px;align-items:center;background:transparent;transition:background .2s,transform .2s}
+.pill-button:hover,.share-button:hover{background:var(--yellow);transform:translateY(-3px)}
+.scribble{position:absolute;font-family:var(--serif);color:#d47f84}.scribble-one{top:19%;right:24%;font-size:44px;transform:rotate(13deg)}.scribble-two{top:18%;left:22%;font-size:36px;color:#c0b57d}.scribble-three{bottom:20%;right:24%;font-size:28px;color:#8ba68a}
+.bottom-squiggle{position:absolute;bottom:25px;color:#c9c0ad;letter-spacing:8px}
+.ticker{overflow:hidden;background:var(--pink);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:13px 0;white-space:nowrap}
+.ticker div{font:11px var(--mono);letter-spacing:2px;animation:marquee 26s linear infinite}.ticker span{padding:0 30px;color:#a24d59}
+.details-section,.note-section{padding:100px clamp(22px,8vw,100px)}.section-kicker{color:#8a8274;margin-bottom:28px}
+.details-section h2,.final-section h2{font-family:var(--serif);font-size:clamp(45px,7vw,75px);line-height:.98;letter-spacing:-2px;margin:0 0 48px}.details-section h2 em,.final-section h2 em{color:#c8797f}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.detail-card{position:relative;overflow:hidden;border:1.3px solid var(--ink);border-radius:4px;padding:26px;min-height:220px;background:#fffdf7}
+.date-card{background:#f4d8d2}.time-card{background:#f5e7ad}.venue-card{grid-column:1/-1;background:#dfe8d9;min-height:235px}
+.card-icon{font-size:23px}.card-label{margin:16px 0 8px}.detail-card h3{font-family:var(--serif);font-size:34px;margin:0 0 5px}
+.detail-card strong{font-size:14px}.detail-card p:not(.card-label){font-size:13px;line-height:1.7;color:#625e55}
+.calendar-stamp,.clock-stamp{position:absolute;right:20px;top:20px;width:56px;height:56px;border:1px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:var(--serif);font-size:19px;transform:rotate(9deg)}
+.clock-stamp{transform:rotate(-9deg);font-size:15px}.calendar-stamp small,.clock-stamp small{font:9px var(--mono)}
+.text-link{display:inline-block;color:var(--ink);font:10px var(--mono);letter-spacing:1px;text-decoration:none;border-bottom:1px solid;padding-bottom:5px;margin-top:7px}
+.note-section{padding-top:20px}.note-card{position:relative;background:#fffdf7;border:1.3px solid var(--ink);padding:44px clamp(25px,7vw,80px);transform:rotate(-.6deg);box-shadow:7px 7px 0 var(--pink)}
+.big-quote{font:80px var(--serif);color:#d78a8d;line-height:.7}.note-card p{font:clamp(20px,3vw,29px)/1.45 var(--serif);max-width:690px;margin:15px 0 26px}
+.note-sign{font:italic 15px var(--serif)}.note-sign b{font-size:18px}.note-star{position:absolute;right:35px;top:30px;color:#c8b24b;font-size:30px}
+.final-section{text-align:center;padding:75px 20px 65px;background:#e8e7d9;position:relative}.final-doodle{font-size:55px;color:#c8797f}
+.final-section>p{font-size:10px}.final-section h2{margin:22px 0 15px;font-size:clamp(60px,10vw,100px)}.final-date{color:#6e695e;margin-bottom:27px}
+.share-button{cursor:pointer;background:var(--yellow)}.footer-hearts{font-size:18px;color:#c8797f;letter-spacing:12px;margin-top:44px}
+footer{padding:22px clamp(20px,5vw,64px);display:flex;justify-content:space-between;gap:15px;color:#777064;font-size:9px}
+.reveal{animation:reveal .8s both}.delay-one{animation-delay:.12s}.delay-two{animation-delay:.26s}.delay-three{animation-delay:.4s}
+@keyframes reveal{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-25%)}}
+@media(min-width:900px){.hero{min-height:740px}.hero-title{font-size:130px}.detail-grid{grid-template-columns:1fr 1fr 1.35fr}.venue-card{grid-column:auto}.detail-card{min-height:280px}.venue-card{min-height:280px}}
+@media(max-width:600px){.topbar{height:58px}.top-note{font-size:8px;letter-spacing:1px}.hero{min-height:630px;padding-top:60px}.hero-title{font-size:clamp(58px,16vw,88px);letter-spacing:-4px}.hand-note{left:5%;top:44%;font-size:21px}.ring-doodle{right:5%;top:36%;font-size:53px}.scribble-one{right:12%;top:17%}.scribble-two{left:9%;top:16%}.scribble-three{right:12%;bottom:15%}.hero-caption{max-width:280px;line-height:1.5}.details-section,.note-section{padding:70px 20px}.detail-grid{grid-template-columns:1fr}.venue-card{grid-column:auto}.detail-card{min-height:205px}.note-section{padding-top:10px}.note-card{padding:35px 25px}.note-star{right:19px;top:18px}footer{font-size:7px;letter-spacing:.8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="invite-shell">
+<nav class="topbar"><span class="tiny-mark">S<span>✳</span>S</span><span class="top-note">THE WEDDING EDIT · 2026</span><a href="#details" class="skip-link">THE DEETS ↓</a></nav>
+<section class="hero" aria-labelledby="hero-title">
+<div class="scribble scribble-one">♡</div><div class="scribble scribble-two">✳</div><div class="scribble scribble-three">✦</div>
+<p class="eyebrow reveal">A LITTLE NOTE, A BIG FEELING</p>
+<h1 id="hero-title" class="hero-title reveal delay-one"><span>Shwetank</span><i>&</i><span>Sheetal</span></h1>
+<div class="hand-note reveal delay-two">are getting<br>married! <b>♡</b></div>
+<div class="ring-doodle reveal delay-two" aria-hidden="true"><span>◯</span><span>◯</span><em>✦</em></div>
+<p class="hero-date reveal delay-three">13 <span>·</span> 12 <span>·</span> 2026</p>
+<p class="hero-caption reveal delay-three">Two people. One forever. And a whole lot of happy chaos.</p>
+<a class="pill-button reveal delay-three" href="#details">COME CELEBRATE WITH US <span>↘</span></a>
+<div class="bottom-squiggle" aria-hidden="true">〰 〰 〰</div>
+</section>
+<section class="ticker" aria-label="Celebration message"><div>LOVE IS IN THE AIR <span>✳</span> SAVE THE DATE <span>♡</span> GOOD VIBES ONLY <span>✳</span> LOVE IS IN THE AIR <span>♡</span></div></section>
+<section id="details" class="details-section">
+<div class="section-kicker">01 / THE PLAN</div><h2>Here’s the <em>when</em><br>& <em>where.</em></h2>
+<div class="detail-grid">
+<article class="detail-card date-card"><span class="card-icon">◷</span><p class="card-label">THE BIG DAY</p><h3>Sunday</h3><strong>13 December 2026</strong><p>Mark it. Screenshot it. Be there.</p><div class="calendar-stamp">13<br><small>DEC</small></div></article>
+<article class="detail-card time-card"><span class="card-icon">✺</span><p class="card-label">THE MOMENT</p><h3>6:30 PM</h3><strong>Let’s make memories</strong><p>Arrive ready for all the feels.</p><div class="clock-stamp">6:30<br><small>PM</small></div></article>
+<article class="detail-card venue-card"><span class="card-icon">⌖</span><p class="card-label">THE PLACE</p><h3>Ghotra Palace</h3><strong>Kamptee Road, Nagpur</strong><p>Beside Kesar Gateway Society Road,<br>Nagpur – 441001, India</p><a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Ghotra+Palace+Kamptee+Road+Nagpur">GET DIRECTIONS ↗</a></article>
+</div></section>
+<section class="note-section"><div class="section-kicker">02 / A NOTE FROM US</div><div class="note-card"><span class="big-quote">“</span><p>Your presence is the kind of present we’ll remember forever. Come for the vows, stay for the joy, the hugs, the photos and the dance floor.</p><div class="note-sign">With love, <b>Shwetank & Sheetal</b> ♡</div><span class="note-star">✳</span></div></section>
+<section class="final-section"><div class="final-doodle">✿</div><p>THE NEXT CHAPTER STARTS</p><h2>See you<br><em>there!</em></h2><p class="final-date">13.12.2026 · 6:30 PM · NAGPUR</p><button class="share-button" id="shareInvite">SHARE THE LOVE ↗</button><div class="footer-hearts">♡ ♡ ♡</div></section>
+<footer><span>MADE WITH ALL THE LOVE</span><span>SHWETANK × SHEETAL · 2026</span></footer>
+</main>
+<script>
+const button=document.querySelector('#shareInvite');
+const data={title:'Shwetank & Sheetal — Wedding Invitation',text:'Save the date! Shwetank & Sheetal are getting married on 13 December 2026 at 6:30 PM, Ghotra Palace, Nagpur. We would love to celebrate with you!'};
+button.addEventListener('click',async()=>{const url=location.href;try{if(navigator.share){await navigator.share({...data,url});button.textContent='THANK YOU FOR SHARING ♡'}else if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(`${data.text} ${url}`);button.textContent='INVITE LINK COPIED ✓'}else{window.prompt('Copy your invitation link:',url)}}catch(e){if(e.name!=='AbortError')button.textContent='PLEASE COPY THE LINK'}});
+</script>
+</body>
+</html>
